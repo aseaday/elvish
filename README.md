@@ -28,6 +28,8 @@ Elvish mimics bash and zsh in a lot of places. The following shows some key diff
 
   ```sh
   fn ls { external:ls --color $@ }
+  # In OS X you need
+  fn ls { external:ls -G $@}
   ```
 
   The `external:` prefix ensures that the external command named `ls` will be called. Otherwise this definition will result in infinite recursion.
